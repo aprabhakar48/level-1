@@ -18,5 +18,7 @@ public class TankDriveCommand extends CommandBase{
     public void execute() {
         // In this method, call the methods you made in the TankDrive
         // In order to set the percent output of the drive motors
+        m_tankDrive.setLeftSpeed(m_controller.getLeftY());
+        m_tankDrive.setRightSpeed(m_controller.getRightY());
     }
 }

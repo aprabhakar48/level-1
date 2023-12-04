@@ -16,7 +16,9 @@ public class TankDriveSubsystem extends SubsystemBase{
     // These methods should set the percent
     // Output of the left and right motors respectively
     public void setLeftSpeed (double targetOutput) {
-        leftMotor.setOutput(ExtendedMath.clamp(-0.5, 0.5))
+        leftMotor.setOutput(ExtendedMath.clamp(-0.5, 0.5, targetOutput));
     }
-    
+    public void setRightSpeed (double targetOutput) {
+        rightMotor.setOutput(ExtendedMath.clamp(-0.5, 0.5, targetOutput));
+    }
 }
